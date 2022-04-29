@@ -1,11 +1,5 @@
-import {StyleSheet, Platform} from 'react-native';
-import {
-  horizontalScale,
-  moderateScale,
-  verticalScale,
-} from '../../utils/Matrics';
+import {StyleSheet} from 'react-native';
 
-const isNative = Platform.OS !== 'web';
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -16,9 +10,9 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   input: {
-    width: isNative ? horizontalScale(250) : horizontalScale(100),
-    height: verticalScale(35),
-    margin: moderateScale(10),
+    width: 250,
+    height: 40,
+    margin: 10,
     borderWidth: 1,
     padding: 10,
     color: 'white',

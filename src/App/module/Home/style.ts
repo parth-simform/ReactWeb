@@ -1,12 +1,10 @@
-import {Platform, StyleSheet} from 'react-native';
-import {moderateScale} from '../../utils/Matrics';
+import {StyleSheet} from 'react-native';
 
-const isNative = Platform.OS !== 'web';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#282c34',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
@@ -14,8 +12,19 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   btn: {
-    padding: isNative ? moderateScale(10) : moderateScale(5),
+    padding: 20,
     backgroundColor: 'red',
     borderRadius: 10,
+  },
+  flatText: {
+    color: 'white',
+    fontWeight: '900',
+    fontSize: 18,
+  },
+  flatView: {
+    borderWidth: 1,
+    borderColor: 'red',
+    padding: 5,
+    borderRadius: 5,
   },
 });

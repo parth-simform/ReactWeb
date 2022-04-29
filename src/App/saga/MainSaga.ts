@@ -10,12 +10,12 @@ function* fetchData(props: any) {
   let arr: Array<saveData> = yield select(state => state.userData);
   arr.push({email: props.get.email, name: props.get.name});
   yield put(Creators.saveData(arr));
-  props.get.props.navigation.push('Settings');
+  // props.get.props.navigation.push('Settings');
 }
 
 function* saveData() {
-  let arr: Array<saveData> = yield select(state => state.userData);
-  console.log(arr);
+  // let arr: Array<saveData> = yield select(state => state.userData);
+  // console.log(arr);
 }
 
 function* MainSaga() {
