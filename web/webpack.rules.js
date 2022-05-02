@@ -12,6 +12,12 @@ module.exports = [
       {
         loader: 'ts-loader',
       },
+      {
+        loader: 'file-loader',
+        options: {
+          context: 'project',
+        },
+      },
     ],
   },
   // {

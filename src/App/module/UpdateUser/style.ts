@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#282c34',
     justifyContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center',
   },
   text: {
     color: 'white',
@@ -26,5 +26,16 @@ export const styles = StyleSheet.create({
     borderColor: 'red',
     padding: 5,
     borderRadius: 5,
+  },
+  backContainer: {
+    flex: 0.1,
+    alignItems: 'flex-start',
+    marginLeft: 50,
+  },
+  inputContainer: {
+    alignItems: 'center',
+  },
+  txtColor: {
+    color: 'white',
   },
 });

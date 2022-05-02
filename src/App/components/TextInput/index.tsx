@@ -12,6 +12,7 @@ const Input = (props: any) => {
         placeholder={props.placeholder}
         placeholderTextColor={'white'}
         keyboardType="numeric"
+        {...props}
       />
     </View>
   );

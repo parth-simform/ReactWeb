@@ -3,19 +3,22 @@ import {createReducer, createActions} from 'reduxsauce';
 export const {Types, Creators} = createActions({
   fetchData: ['get', 'loading'],
   saveData: ['response', 'loading'],
-  delete: ['response', 'loading'],
+  deleteUser: ['email', 'loading'],
+  updateUser: ['data', 'loading'],
 });
 
 export interface intialValue {
   loading: boolean;
   userData: any;
-  delete: string;
+  delete: any;
+  update: [];
 }
 
 const INITIAL_STATE: intialValue = {
   userData: [],
   loading: false,
-  delete: '',
+  delete: [],
+  update: [],
 };
 export interface Action {
   action: any;
@@ -35,15 +38,23 @@ export const saveData = (state: intialValue, action: Action) => {
     loading: false,
   };
 };
-export const deleteData = (state: intialValue) => {
+export const deleteUser = (state: intialValue, action: Action) => {
   return {
     ...state,
     loading: true,
+    get: action.response,
   };
 };
-
+export const updateUser = (state: intialValue, action: Action) => {
+  return {
+    ...state,
+    loading: true,
+    get: action.response,
+  };
+};
 export const reducer = createReducer(INITIAL_STATE, {
   [Types.FETCH_DATA]: fetchData,
   [Types.SAVE_DATA]: saveData,
-  [Types.DELETE]: deleteData,
+  [Types.DELETE_USER]: deleteUser,
+  [Types.UPDATE_USER]: updateUser,
 });
